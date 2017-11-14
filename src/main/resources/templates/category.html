@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Star Trek Review</title>
+	<link rel="stylesheet" type="text/css" href="./styles.css"/>
+</head>
+
+	<body>
+	
+		<header>
+			<h1> Star Trek Movie Review </h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/categories">Categories</a></li>
+				<li><a href="/reviews">Reviews</a></li>
+			</ul>
+		</nav>
+		<div>
+			<h2 th:text="${category.categoryTitle}"></h2>
+			<p th:text="${category.content}"></p>
+			<img th:src="${category.imageUrl}"/>
+			<a href="http://localhost:8080/reviews">Back to home</a>
+		</div>
+	
+	</body>
+</html>
