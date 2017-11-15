@@ -2,13 +2,15 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
+
 <head>
 	<title>Star Trek Review</title>
+	<link rel="stylesheet" type="text/css" href="./layout.css"/>
 	<link rel="stylesheet" type="text/css" href="./styles.css"/>
 </head>
 
 	<body>
-	
+
 		<header>
 			<h1> Star Trek Movie Review </h1>
 		</header>
@@ -25,6 +27,6 @@
 			<img th:src="${review.imageUrl}"/>
 			<a href="http://localhost:8080/reviews">Back to home</a>
 		</div>
-	
+
 	</body>
 </html>

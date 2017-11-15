@@ -30,7 +30,8 @@ public class Category {
 		return categoryId;
 	}
 
-	public String getCategory() {
+
+	public String getCategoryTitle() {
 		return categoryTitle;
 	}
 

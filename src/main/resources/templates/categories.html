@@ -5,6 +5,7 @@
 <head>
 	<title>Star Trek Reviews</title>
 	<link rel="stylesheet" type="text/css" href="./styles.css"/>
+	<link rel="stylesheet" type="text/css" href="./layout.css"/>
 </head>
 
 	<body>
@@ -17,10 +18,11 @@
 				<li><a href="/reviews">Reviews</a></li>
 			</ul>
 		</nav>
-		
+
 		<div th:each="category: ${categories}">
 			<p>
-				<a th:href="@{/category(id=${category.id})}" th:text="${category.title}"></a>
+				<a th:href="@{/category(id=${category.categoryId})}"
+				th:text="${category.categoryTitle}"></a>
 			</p>
 		</div>
 	</body>

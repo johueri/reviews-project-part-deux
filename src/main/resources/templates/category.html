@@ -10,7 +10,7 @@
 	<body>
 	
 		<header>
-			<h1> Star Trek Movie Review </h1>
+		<h1 th:text="${category.categoryTitle}"></h1>
 		</header>
 		<nav>
 			<ul>
@@ -18,11 +18,13 @@
 				<li><a href="/reviews">Reviews</a></li>
 			</ul>
 		</nav>
-		<div>
-			<h2 th:text="${category.categoryTitle}"></h2>
+		
+		<div class="categoryStuff">
+			<div th:each= "categoryThyme:${category.reviews}>
+			<h2 th:text="${categoryThyme.title}"></h2>
+			<h2 th:text="${categoryThyme.imageUrl}"></h2>
 			<p th:text="${category.content}"></p>
-			<img th:src="${category.imageUrl}"/>
-			<a href="http://localhost:8080/reviews">Back to home</a>
+				
 		</div>
 	
 	</body>
