@@ -20,12 +20,13 @@
 		</nav>
 		
 		<div class="categoryStuff">
-			<div th:each= "categoryThyme:${category.reviews}>
-			<h2 th:text="${categoryThyme.title}"></h2>
-			<h2 th:text="${categoryThyme.imageUrl}"></h2>
-			<p th:text="${category.content}"></p>
+			<div th:each= "review: ${category.reviewInCategory}">
+			 <p>
+				<a th:href="@{/review(id=${review.reviewId})}" th:text="${review.title}"></a>
+			 </p>
 				
-		</div>
+		  </div>
+		</div>  
 	
 	</body>
 </html>
