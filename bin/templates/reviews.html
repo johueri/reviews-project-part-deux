@@ -6,7 +6,8 @@
 	<title>Star Trek Reviews</title>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
-	<body>
+<body>
+	<div class="container">
 		<header>
 			<h1>Star Trek Movie Reviews</h1>
 		</header>
@@ -16,11 +17,18 @@
 				<li><a href="/reviews">Reviews</a></li>
 			</ul>
 		</nav>
-		
-		<div th:each="review: ${reviews}">
-			<p>
-				<a th:href="@{/review(id=${review.reviewId})}" th:text="${review.title}"></a>
-			</p>
+		<div class="thymleaf-container">
+			<div th:each="review: ${reviews}">
+				
+					<div class="reviews-title">
+							<a th:href="@{/review(id=${review.reviewId})}" th:text="${review.title}"></a>
+					</div>
+			</div>
 		</div>
-	</body>
+
+		<footer>
+			<p>2017</p>
+		</footer>
+	</div>
+</body>
 </html>

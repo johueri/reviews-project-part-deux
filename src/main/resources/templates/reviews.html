@@ -8,21 +8,27 @@
 </head>
 <body>
 	<div class="container">
-				<header>
-					<h1>Star Trek Movie Reviews</h1>
-				</header>
-				<nav>
-					<ul>
-						<li><a href="/categories">Categories</a></li>
-						<li><a href="/reviews">Reviews</a></li>
-					</ul>
-				</nav>
+		<header>
+			<h1>Star Trek Movie Reviews</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/categories">Categories</a></li>
+				<li><a href="/reviews">Reviews</a></li>
+			</ul>
+		</nav>
+		<div class="thymleaf-container">
+			<div th:each="review: ${reviews}">
+				
+					<div class="reviews-title">
+							<a th:href="@{/review(id=${review.reviewId})}" th:text="${review.title}"></a>
+					</div>
+			</div>
+		</div>
 
-		<div th:each="review: ${reviews}">
-			<p>
-				<a th:href="@{/review(id=${review.reviewId})}" th:text="${review.title}"></a>
-			</p>
-		</div>
-		</div>
+		<footer>
+			<p>2017</p>
+		</footer>
+	</div>
 </body>
 </html>
