@@ -23,7 +23,7 @@
 				<h2 th:text="${review.title}"></h2>
 			</div>
 			<div class="review-category">
-				<h3 th:text="${review.category}"></h3>
+				<h3 th:text="${review.category.categoryTitle}"></h3>
 			</div>
 			<div class="review-image">
 				<img th:src="${review.imageUrl}"/>
@@ -36,7 +36,8 @@
 			<a href="http://localhost:8080/reviews">Back to home</a>
 		</div>
 
-		<footer>2017</footer>
+		
 	</div>	
+	<footer>2017</footer>
 </body>
 </html>

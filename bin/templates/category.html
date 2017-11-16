@@ -4,29 +4,29 @@
 
 <head>
 	<title>Star Trek Review</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 
-	<body>
+<body>
 	
-		<header>
+	<header>
 		<h1 th:text="${category.categoryTitle}"></h1>
-		</header>
-		<nav>
-			<ul>
-				<li><a href="/categories">Categories</a></li>
-				<li><a href="/reviews">Reviews</a></li>
-			</ul>
-		</nav>
-		
-		<div class="categoryStuff">
-			<div th:each= "review: ${category.reviewInCategory}">
-			 <p>
-				<a th:href="@{/review(id=${review.reviewId})}" th:text="${review.title}"></a>
-			 </p>
-				
-		  </div>
-		</div>  
+	</header>
+	<nav>
+		<ul>
+			<li><a href="/categories">Categories</a></li>
+			<li><a href="/reviews">Reviews</a></li>
+		</ul>
+	</nav>
 	
-	</body>
+	<div class="categoryStuff">
+		<div th:each= "review: ${category.reviewInCategory}">
+			<div class="reviews-titiles-catpage">
+				<a th:href="@{/review(id=${review.reviewId})}" th:text="${review.title}"></a>
+			</div>
+			
+		</div>
+	</div>  
+	
+</body>
 </html>
